@@ -5,11 +5,9 @@ name: CI
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  watch:
-      types: [started]
   repository_dispatch:
       types: 
-       - hems_test
+       - develop_main
       
 #   push:
 #     branches: [ master ]
@@ -29,7 +27,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       with: 
-        ref: staging
+        ref: develop
 
     # Runs a single command using the runners shell
     - name: On my_custom_webhook
