@@ -28,6 +28,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      with: 
+        ref: staging
 
     # Runs a single command using the runners shell
     - name: On my_custom_webhook
