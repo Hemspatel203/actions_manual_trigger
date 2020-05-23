@@ -31,7 +31,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: On my_custom_webhook
-      run: echo "$ {{toJSON (github.event.client_payload)}}"
+      run: echo ${{toJSON (github.event.client_payload)}}
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
